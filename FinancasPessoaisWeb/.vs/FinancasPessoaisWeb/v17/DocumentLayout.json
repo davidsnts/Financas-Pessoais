@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FinancasPessoaisWeb\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAB4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-01T02:31:53.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "FinancasPessoaisWeb\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-01T02:31:50.493Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
