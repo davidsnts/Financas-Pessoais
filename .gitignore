@@ -367,3 +367,6 @@ mono_crash.*
 
 # JetBrains Rider
 .idea/
+FinancasPessoaisWeb/.vs/FinancasPessoaisWeb/DesignTimeBuild/.dtbcache.v2
+FinancasPessoaisWeb/.vs/FinancasPessoaisWeb/v17/.futdcache.v2
+FinancasPessoaisWeb/.vs/
