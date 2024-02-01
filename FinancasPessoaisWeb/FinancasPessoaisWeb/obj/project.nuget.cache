@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Sf1mdz7G5vJk5unYbnGPG3YkHpEyAY4cXEiG7gI4iF7L7/ejnG1407p8kqr3PDDdtWEgr8qhJ7qLHzneFnQeug==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.25\\microsoft.netcore.app.host.win-x64.6.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}
