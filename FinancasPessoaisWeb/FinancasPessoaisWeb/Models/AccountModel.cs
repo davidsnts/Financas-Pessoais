@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinancasPessoaisWeb.Models
 {
@@ -20,6 +21,7 @@ namespace FinancasPessoaisWeb.Models
         [DataType(DataType.Password)]
         public string Senha { get; set; }
 
+        [NotMapped]
         [Required(ErrorMessage = "O campo Confirmação de Senha é obrigatório.")]
         [DataType(DataType.Password)]
         [Compare("Senha", ErrorMessage = "A senha e a confirmação de senha não coincidem.")]

@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\views\\account\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\views\\account\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\controllers\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\controllers\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|c:\\users\\david\\source\\repos\\davidsnts\\financaspessoais\\financaspessoaisweb\\financaspessoaisweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DA70D60B-5F04-4ECA-BEED-1E13F5E1E5AA}|FinancasPessoaisWeb\\FinancasPessoaisWeb.csproj|solutionrelative:financaspessoaisweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,58 +30,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Controllers\\LoginModel.cs",
-              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Controllers\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Controllers\\LoginModel.cs",
-              "RelativeToolTip": "FinancasPessoaisWeb\\Controllers\\LoginModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-01T03:30:27.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "FinancasPessoaisWeb\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-01T03:18:58.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cadastro.cshtml",
-              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Account\\Cadastro.cshtml",
-              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Views\\Account\\Cadastro.cshtml",
-              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Views\\Account\\Cadastro.cshtml",
-              "RelativeToolTip": "FinancasPessoaisWeb\\Views\\Account\\Cadastro.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-01T02:38:14.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AccountModel.cs",
               "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Models\\AccountModel.cs",
               "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Models\\AccountModel.cs",
               "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Models\\AccountModel.cs",
               "RelativeToolTip": "FinancasPessoaisWeb\\Models\\AccountModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAHAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-01T02:42:39.262Z",
+              "WhenOpened": "2024-02-05T23:38:34.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Program.cs",
+              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Program.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Program.cs",
+              "RelativeToolTip": "FinancasPessoaisWeb\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-02T19:40:57.362Z",
               "EditorCaption": ""
             },
             {
@@ -92,9 +66,35 @@
               "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Controllers\\AccountController.cs",
               "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Controllers\\AccountController.cs",
               "RelativeToolTip": "FinancasPessoaisWeb\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAxwBYAAAAJAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAA9wCkAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-01T02:42:36.864Z",
+              "WhenOpened": "2024-02-01T03:50:58.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\Services\\AccountService.cs",
+              "RelativeToolTip": "FinancasPessoaisWeb\\Services\\AccountService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-02T19:33:11.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "FinancasPessoaisWeb\\appsettings.json",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\davidsnts\\FinancasPessoais\\FinancasPessoaisWeb\\FinancasPessoaisWeb\\appsettings.json",
+              "RelativeToolTip": "FinancasPessoaisWeb\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-01T03:45:37.239Z",
               "EditorCaption": ""
             }
           ]
