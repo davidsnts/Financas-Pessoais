@@ -29,13 +29,18 @@
                         <th>Despesa</th>
                         <th>Valor</th>
                         <th>Data de Vencimento</th>
+                        <th>Situacao</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>[Nome da Despesa]</td>
-                        <td>R$ [Valor da Despesa]</td>
-                        <td>[Data de Vencimento]</td>
+                        @foreach (var item in @Model.DespesasFuturas)
+                        {
+                            <td>@item.Descricao</td>
+                            <td>@item.Valor</td>
+                            <td>@item.Vencimento</td> 
+                            <td>@item.Situacao</td>
+                        }                        
                     </tr>
                 </tbody>
             </table>

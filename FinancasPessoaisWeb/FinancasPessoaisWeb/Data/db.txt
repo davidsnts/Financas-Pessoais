@@ -9,3 +9,24 @@ CREATE TABLE account (
 ALTER TABLE `financaspessoais`.`account` 
 ADD COLUMN `Saldo` DECIMAL(8,2) NULL DEFAULT 0.00 AFTER `Senha`;
 
+CREATE TABLE `financaspessoais`.`despesa` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_account` INT NOT NULL,
+  `desc` VARCHAR(255) NOT NULL,
+  `valor` DECIMAL(8,2) NOT NULL,
+  `vencimento` DATETIME NOT NULL,
+  `situacao` VARCHAR(45) NOT NULL DEFAULT 'A pagar',
+  PRIMARY KEY (`id`));
+
+ALTER TABLE `financaspessoais`.`despesa` 
+ADD INDEX `fk_account_despesa_idx` (`id_account` ASC) VISIBLE;
+;
+ALTER TABLE `financaspessoais`.`despesa` 
+ADD CONSTRAINT `fk_account_despesa`
+  FOREIGN KEY (`id_account`)
+  REFERENCES `financaspessoais`.`account` (`Id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `financaspessoais`.`despesa` 
+CHANGE COLUMN `vencimento` `vencimento` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;

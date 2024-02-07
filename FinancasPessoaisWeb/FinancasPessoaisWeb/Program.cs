@@ -10,6 +10,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
                     ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
 
 builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<DespesaService>();
 
 // Adicione os serviços ao contêiner.
 builder.Services.AddControllersWithViews();

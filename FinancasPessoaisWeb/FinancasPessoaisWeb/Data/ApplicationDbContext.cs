@@ -10,10 +10,11 @@
         {
         }
         public DbSet<AccountModel> Account { get; set; }
+        public DbSet<DespesaModel> Despesa { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            //configurando a tabela account
+        {            
             modelBuilder.ApplyConfiguration(new TabelaAccountConfiguration());
+            modelBuilder.ApplyConfiguration(new TabelaDespesaConfiguration());
         }       
     }
 }

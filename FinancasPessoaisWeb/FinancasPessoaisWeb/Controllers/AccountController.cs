@@ -11,9 +11,11 @@ namespace FinancasPessoais.Controllers
     public class AccountController : Controller
     {        
         private readonly AccountService _accountService;
-        public AccountController(AccountService accountService)
+        private readonly DespesaService _despesaService;
+        public AccountController(AccountService accountService, DespesaService despesaService)
         {           
             _accountService = accountService;
+            _despesaService = despesaService;
         }
         public IActionResult Cadastro()
         {
@@ -39,12 +41,8 @@ namespace FinancasPessoais.Controllers
             
             AccountModel acc = await _accountService.BuscarPorCPF(cpf);
 
-           
-            var despesasFuturas = new List<DespesaModel>
-                    {
-                        new DespesaModel { Nome = "Aluguel", Valor = 500.0m, DataVencimento = DateTime.Now.AddMonths(1) },
-                        new DespesaModel { Nome = "Conta de Luz", Valor = 100.0m, DataVencimento = DateTime.Now.AddMonths(1).AddDays(5) }
-                    };
+
+            var despesasFuturas = await _despesaService.BuscarPorIdAccount(acc.Id.ToString());
 
             var viewModel = new DashboardViewModel
             {
