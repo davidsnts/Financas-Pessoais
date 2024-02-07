@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -7,8 +9,12 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FinancasPessoaisWeb.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
+@{
+    string? usuarioLogadoNome = HttpContextAccessor.HttpContext.Session.GetString("UsuarioLogadoNome");
+}
 <body class="bg-light">
     <header>
         <nav id="navegacao" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3" >
@@ -20,16 +26,27 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <div class="menu">
                         <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                            </li>                            
+                            @if (!string.IsNullOrEmpty(usuarioLogadoNome))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Dashboard">Dashboard</a>
+                                </li>
+                            }
+                                                       
                         </ul>
                     </div>
                     <div class="account">
                         <ul class="navbar-nav flex-grow-1">                           
-                            <li class="nav-item">
-                                <a class="nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login">Entrar</a>
-                            </li>
+                            
+                            @if (!string.IsNullOrEmpty(usuarioLogadoNome))
+                            {   <li class="nav-item">
+                                    <a style="background-color:#EEE536; border-radius:5px; font-weight:bolder" role="button" class="btn btn-sm nav-link text-danger" asp-area="" asp-controller="Account" asp-action="logout">SAIR</a>
+                                </li>
+                            }else{
+                                <li class="nav-item">
+                                    <a style="background-color:#EEE536; border-radius:5px; font-weight:bolder" role="button" class="btn btn-sm nav-link text-danger" asp-area="" asp-controller="Account" asp-action="Login">ENTRAR</a>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -55,3 +72,4 @@
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-e4HVo6z6L+JWnK1ku1dDS6zPA3cIwjX5UpTQsO3LGqUtezAFp7K0uZae/NP5d8J" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+

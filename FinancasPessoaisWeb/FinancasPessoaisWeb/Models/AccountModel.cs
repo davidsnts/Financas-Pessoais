@@ -6,6 +6,7 @@ namespace FinancasPessoaisWeb.Models
     public class AccountModel
     {
         public int Id { get; set; }
+        public decimal Saldo { get; set; }
 
         [Required(ErrorMessage = "O campo Nome é obrigatório.")]
         public string Nome { get; set; }

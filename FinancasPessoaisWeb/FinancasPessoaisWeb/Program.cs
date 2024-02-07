@@ -13,6 +13,7 @@ builder.Services.AddScoped<AccountService>();
 
 // Adicione os serviços ao contêiner.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

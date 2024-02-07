@@ -20,11 +20,26 @@ namespace FinancasPessoaisWeb.Services
             var account = await _context.Account.FirstOrDefaultAsync(a => a.CPF == cpf);
             return account;
         }
+        public async Task<AccountModel> BuscarPorId(string id)
+        {
+            var account = await _context.Account.FirstOrDefaultAsync(a => a.Id == int.Parse(id));
+            return account;
+        }
         public async Task<bool> CadastrarConta(AccountModel accountModel)
         {
             _context.Account.Add(accountModel);
             await _context.SaveChangesAsync();
             return accountModel.Id > 0;
         }
+
+        public async Task<bool> AtualizarConta(AccountModel accountModel)
+        {            
+            _context.Account.Update(accountModel); 
+            await _context.SaveChangesAsync();
+            return accountModel.Id > 0; 
+        }
+
+
+
     }
 }

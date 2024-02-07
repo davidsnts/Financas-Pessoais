@@ -5,3 +5,7 @@ CREATE TABLE account (
     Telefone VARCHAR(255) NOT NULL,
     Senha VARCHAR(255) NOT NULL
 );
+
+ALTER TABLE `financaspessoais`.`account` 
+ADD COLUMN `Saldo` DECIMAL(8,2) NULL DEFAULT 0.00 AFTER `Senha`;
+

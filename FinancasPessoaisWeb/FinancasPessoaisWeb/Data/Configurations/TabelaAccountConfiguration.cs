@@ -14,6 +14,7 @@ namespace FinancasPessoaisWeb.Data.Configurations
             builder.Property(e => e.CPF).HasColumnName("CPF").IsRequired().HasMaxLength(11);
             builder.Property(e => e.Telefone).HasColumnName("Telefone").IsRequired();
             builder.Property(e => e.Senha).HasColumnName("Senha").IsRequired();
+            builder.Property(e => e.Saldo).HasColumnName("Saldo").IsRequired();
         }
     }
 }

@@ -1,22 +1,28 @@
 ﻿@model DashboardViewModel
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="container mt-5">
-    <div class="row mt-3">
+    <div class="d-flex justify-content-between">
         <div class="col-md-6">
             <h2>Bem-vindo, @Model.Account.Nome!</h2>
             <!-- Adicione um ícone de boas-vindas/dashboard -->
         </div>
-        <div class="col-md-6">
-            <h4>Saldo da Conta:</h4>
-            <p>R$ @Model.SaldoConta</p>
-            <a class="btn btn-dark btn-sm"><i class="bi bi-cash"></i> Adicionar saldo</a>            
-            <a class="btn btn-dark btn-sm"><i class="bi bi-plus"></i> Adicionar Despesas</a>           
+        <div class="col-md-6 border border-secondary" style="max-width:190px; max-height:150px; border-radius:5px; padding:5px">
+            <h5 class="text-secondary text-center">Saldo R$</h5>
+            <div class="input-group" >                
+                <input id="saldoInput" type="text" class="form-control" value="@Model.Account.Saldo">
+                <div class="input-group-append">
+                    <button id="btnAlterar" class="btn btn-outline-dark bg-danger text-white fw-bolder border-0 rounded-0" type="button">Alterar</button>
+                </div>
+            </div>   
         </div>
     </div>
 
     <div class="row mt-3">
         <div class="col-md-12">
             <h4>Despesas Futuras:</h4>
+            <a class="btn btn-dark btn-sm"><i class="bi bi-plus"></i> Adicionar Despesas</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -36,4 +42,29 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnAlterar").click(function () {
+            // Capturar o valor do input
+            var saldo = $("#saldoInput").val();
+
+            // Exibir uma mensagem de confirmação
+            var confirmacao = confirm("Tem certeza de que deseja alterar o saldo para " + saldo + "?");
+
+            // Verificar se o usuário confirmou a ação
+            if (confirmacao) {
+                // Enviar os dados via POST
+                $.post("/Account/AtualizaSaldo", { saldo: saldo, id_usuario: @HttpContextAccessor.HttpContext.Session.GetString("UsuarioLogadoId") }, function (data, status) {
+                    // Aqui você pode manipular a resposta do servidor, se necessário
+                    alert(data);
+                    console.log("Status da requisição: " + status);
+                });
+            } else {
+                // Se o usuário cancelar, não faça nada
+                console.log("Ação cancelada pelo usuário.");
+            }
+        });
+    });
+</script>
 
