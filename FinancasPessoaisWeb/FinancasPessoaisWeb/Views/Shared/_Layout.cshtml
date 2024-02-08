@@ -40,11 +40,11 @@
                             
                             @if (!string.IsNullOrEmpty(usuarioLogadoNome))
                             {   <li class="nav-item">
-                                    <a style="background-color:#EEE536; border-radius:5px; font-weight:bolder" role="button" class="btn btn-sm nav-link text-danger" asp-area="" asp-controller="Account" asp-action="logout">SAIR</a>
+                                    <a style="font-weight:bolder" role="button" class="btn btn-success btn-sm nav-link text-light" asp-area="" asp-controller="Account" asp-action="logout">SAIR</a>
                                 </li>
                             }else{
                                 <li class="nav-item">
-                                    <a style="background-color:#EEE536; border-radius:5px; font-weight:bolder" role="button" class="btn btn-sm nav-link text-danger" asp-area="" asp-controller="Account" asp-action="Login">ENTRAR</a>
+                                    <a style="font-weight:bolder" role="button" class="btn btn-success btn-sm nav-link text-light" asp-area="" asp-controller="Account" asp-action="Login">ENTRAR</a>
                                 </li>
                             }
                         </ul>

@@ -1,0 +1,174 @@
+﻿@model DashboardViewModel
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<div id="edtDespesaDiv">
+</div>
+
+
+<div id="geral" class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Gerenciar <b>Despesas</b></h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="#addDespesa" class="btn btn-success btn-sm fw-bolder" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Nova Despesa</span></a>
+                        @* <a href="#deleteDespesaModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Marcar como paga</span></a> *@
+                    </div>
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Vencimento</th>
+                        <th>Situação</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in @Model.DespesasFuturas)
+                    {
+                        <tr data-despesa-id="@item.Id">
+                            <td>@item.Descricao</td>
+                            <td>@item.Valor</td>
+                            <td>@item.Vencimento</td>
+                            <td>@item.Situacao</td>
+                            <td>
+                                @* <a href="#editDespesaModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                            <a href="#deleteDespesaModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Apagar">&#xE872;</i></a> *@
+                                <a class="edit"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                                <a href="#deleteDespesaModal" class="delete" data-toggle="modal"><i class="material-icons " data-toggle="tooltip" title="Apagar">&#xe872;</i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="addDespesa" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="formAddDespesa" method="post" action="/Despesa/AddDespesa">
+                <div class="modal-header">
+                    <h4 class="modal-title">Adicionar Despesa</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <input id="descricaoInput" name="descricao" type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Valor</label>
+                        <input id="valorInput" name="valor" type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Vencimento</label>
+                        <input id="vencimentoInput" name="vencimento" type="date" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                    <input type="submit" id="btnAddDespesa" class="btn btn-success" value="Salvar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div id="deleteDespesaModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Apagar Despesa</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja apagar esta despesa?</p>
+                <p class="text-danger fw-bolder"><small>Esta ação não pode ser desfeita...</small></p>
+            </div>
+            <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <!-- Utilize um formulário para enviar uma solicitação de exclusão -->
+                <form id="deleteDespesaForm" action="/Despesa/Apagar" method="post">
+                    <input type="hidden" id="despesaId" name="id" value="">
+                    <input type="submit" class="btn btn-danger" value="Apagar">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#formAddDespesa").submit(function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Capturar os valores dos campos de entrada
+            var descricao = $("#descricaoInput").val();
+            var valor = $("#valorInput").val();
+            var vencimento = $("#vencimentoInput").val();
+
+            // Enviar os dados via POST
+            $.post("/Despesa/AddDespesa", {
+                descricao: descricao,
+                valor: valor,
+                vencimento: vencimento
+            }, function (data, status) {
+                // Manipular a resposta do servidor, se necessário
+                alert(data);
+                console.log("Status da requisição: " + status);
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        $(".edit").click(function () {
+            $("#geral").hide();
+            var despesaId = $(this).closest("tr").data("despesa-id");
+            $.get("/Despesa/GetDespesa?id=" + despesaId, function (data) {
+                $("#edtDespesaDiv").html(data);
+            });
+        });
+    });
+
+
+    $(document).ready(function () {
+        // Evento de clique no botão de exclusão
+        $(".delete").click(function () {
+            var despesaId = $(this).closest("tr").data("despesa-id");
+            $("#despesaId").val(despesaId);
+            $("#deleteDespesaModal").modal("show");
+        });
+    });
+
+
+</script>
